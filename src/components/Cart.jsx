@@ -5,9 +5,9 @@ const Cart = ({displayCart}) => {
     <div>
       <h2>Shopping Cart</h2>
       <ul>
-        {displayCart.map((name, index)=> {
-          return <li key={index}>{`${name} is in your cart`}</li>
-        })}
+        {displayCart.map((name, index)=> (
+          <li key={index}>{`${name} is in your cart`}</li>
+        ))}
       </ul>
     </div>
   )

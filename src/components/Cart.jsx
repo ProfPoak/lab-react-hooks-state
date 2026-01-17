@@ -1,11 +1,13 @@
 import React from 'react'
 
-const Cart = () => {
+const Cart = ({displayCart}) => {
   return (
     <div>
       <h2>Shopping Cart</h2>
       <ul>
-        {/* TODO: Include items here in li tags with text 'ITEM.NAME is in your cart.' */}
+        {displayCart.map((name, index)=> {
+          return <li key={index}>{`${name} is in your cart`}</li>
+        })}
       </ul>
     </div>
   )
